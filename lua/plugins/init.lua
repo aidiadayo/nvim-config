@@ -26,6 +26,10 @@ vim.pack.add({
   -- Flutter
   require 'plugins.debugger',
   require 'plugins.fluttertools',
+
+  -- Markdown / images (kitty graphics protocol)
+  require 'plugins.image',
+  require 'plugins.render-markdown',
 }, {
   load = function(plug)
     local data = plug.spec.data or {}
