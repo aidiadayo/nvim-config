@@ -29,7 +29,6 @@ vim.pack.add({
 
   -- Markdown / images (kitty graphics protocol)
   require 'plugins.image',
-  require 'plugins.render-markdown',
 }, {
   load = function(plug)
     local data = plug.spec.data or {}
