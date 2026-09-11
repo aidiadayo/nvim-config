@@ -50,6 +50,7 @@ return {
         pyright = {},
         kotlin_language_server = {},
         sourcekit = {},
+        bashls = {},
       }
 
       for name, server in pairs(servers) do
