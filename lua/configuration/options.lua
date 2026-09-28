@@ -36,3 +36,14 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+
+-- netrw
+-- netrw is an opt package in 0.12; load it now so netrw_gitignore#Hide exists
+vim.cmd.packadd 'netrw'
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+vim.g.netrw_altv = 1
+local dotfiles = [[\(^\|\s\s\)\zs\.\S\+]]
+local gitignored = vim.fn['netrw_gitignore#Hide']()
+-- outside a git repo the helper returns git's error text instead of patterns
+vim.g.netrw_list_hide = vim.v.shell_error == 0 and gitignored .. ',' .. dotfiles or dotfiles
