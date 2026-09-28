@@ -16,6 +16,8 @@ vim.o.undofile = true
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+-- default adds -uu, which searches hidden and gitignored files
+vim.o.grepprg = 'rg --vimgrep'
 
 -- UI
 vim.o.signcolumn = 'yes'
