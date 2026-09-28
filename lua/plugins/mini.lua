@@ -3,6 +3,8 @@ return {
   version = 'main',
   data = {
     setup = function()
+      require('mini.icons').setup()
+      MiniIcons.mock_nvim_web_devicons()
       require('mini.completion').setup()
       require('mini.pick').setup()
       require('mini.pairs').setup()
